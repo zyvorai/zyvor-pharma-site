@@ -20,7 +20,7 @@ this page.
 - **Controlled-drug register.** Append-only and hash-chained, so a changed or removed entry is detected and pinpointed;
   exportable as CSV for an inspector.
 - **Bills.** Print or reprint a tax invoice or cash memo with batch and expiry on every line, through any printer with a driver.
-- **Catalogue.** Add and edit products (barcode, schedule, GST rate, MRP) and receive stock by batch, with every change checked.
+- **Catalogue and stock.** Add and edit products (barcode, schedule, GST rate, MRP), receive stock by batch, and write off or correct it. Every delivery, write-off and count correction goes in an append-only stock history with who, why and the quantity before and after.
 - **People.** Sign-in per person with cashier, pharmacist and admin roles, an audit log, and encrypted backups.
 
 ## Where it runs
@@ -36,8 +36,8 @@ this page.
   your state's rules and your licence conditions before relying on it.
 - Barcode scanning and bill printing are tested with simulated input. They have not yet been verified on real scanner
   or thermal printer hardware.
-- Not built yet: receiving stock by scanning, camera scanning, stock write-offs and corrections, discontinuing a product,
-  raw thermal-printer commands, two-factor sign-in.
+- Not built yet: receiving stock by scanning, camera scanning, discontinuing a product, a register entry for a write-off of
+  controlled (H1/X) stock, raw thermal-printer commands, two-factor sign-in.
 
 ## Contact
 
