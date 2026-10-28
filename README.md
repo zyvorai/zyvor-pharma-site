@@ -19,7 +19,8 @@ this page.
   with the patient's address and the prescriber's registration number, and each sale is written to the controlled-drug register.
 - **Controlled-drug register.** Append-only and hash-chained, so a changed or removed entry is detected and pinpointed;
   exportable as CSV for an inspector. It records dispensing and, for H1/X drugs, every delivery, write-off and recount correction
-  with its reason, note and who recorded it, in the same chain.
+  with its reason, note and who recorded it, in the same chain. Each new entry also records the units left in its batch, and
+  verification flags any batch whose balance does not follow from the entry before it (stock that moved without an entry).
 - **Bills.** Print or reprint a tax invoice or cash memo with batch and expiry on every line, through any printer with a driver.
 - **Catalogue and stock.** Add and edit products (barcode, schedule, GST rate, MRP), receive stock by batch, correct a batch's number or expiry, write off or correct stock, remove emptied batches, and discontinue a product (nothing is ever deleted; what is left on the shelf can still be sold). Every delivery, write-off and count correction goes in an append-only stock history with who, why and the quantity before and after.
 - **People.** Sign-in per person with cashier, pharmacist and admin roles, an audit log, and encrypted backups.
@@ -37,7 +38,7 @@ this page.
   your state's rules and your licence conditions before relying on it.
 - Barcode scanning and bill printing are tested with simulated input. They have not yet been verified on real scanner
   or thermal printer hardware.
-- Not built yet: receiving stock by scanning, camera scanning, a running balance per batch in the register,
+- Not built yet: receiving stock by scanning, camera scanning, register balances for entries made before this feature,
   raw thermal-printer commands, two-factor sign-in.
 
 ## Contact
