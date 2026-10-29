@@ -41,7 +41,6 @@
 </section>
 
 <section id="start">
-  <p class="note warn center"><strong>The one-command install is not published yet.</strong> The commands below will work once the first release is out; until then, <a href="../demo/">open the browser demo</a>, which needs no install.</p>
   <div class="center"><p class="kicker">Step 1</p><h2>Pick your computer.</h2><p class="sub">We guessed from your browser; change it if we were wrong. You need Docker running first (<a href="#help">help</a>).</p></div>
   <div class="controls"><div class="oseg" role="radiogroup" aria-label="Your computer">
     <button type="button" role="radio" aria-checked="true" data-value="mac">Mac</button>
@@ -62,7 +61,7 @@
 <section class="tint" id="steps">
   <div class="center"><p class="kicker">Steps 2 to 4</p><h2>What you will see.</h2></div>
 <div class="step"><div><h3><span class="n">2</span> The installer runs</h3><p>It downloads two small images (checked against a checksum), starts Zyvora Pharmacy with a fictional pharmacy, and prints a one-time password. Open <code>http://127.0.0.1:8080</code>.</p></div><picture class="pic shot"><img class="only-light" src="../shots/light-overview.jpg" alt="Zyvora Pharmacy overview" width="1440" height="900" loading="lazy"><img class="only-dark" src="../shots/dark-overview.jpg" alt="Zyvora Pharmacy overview in dark appearance" width="1440" height="900" loading="lazy"></picture></div>
-<div class="step flip"><div><h3><span class="n">3</span> Sign in with the printed password</h3><p>Use the user name <code>admin</code> and the password the installer printed (also saved in <code>~/.zyvor-pharma/.env</code>). There is no default password. Keep that file private.</p></div><picture class="pic shot"><img class="only-light" src="../shots/light-counter.jpg" alt="The sales counter" width="1440" height="900" loading="lazy"><img class="only-dark" src="../shots/dark-counter.jpg" alt="The sales counter in dark appearance" width="1440" height="900" loading="lazy"></picture></div>
+<div class="step flip"><div><h3><span class="n">3</span> Sign in with the printed password</h3><p>Use the user name <code>admin</code> and the password the installer printed (also saved in <code>~/.zyvor-pharma/.env</code>). There is no default password. The app then asks you to choose your own password before it lets you in.</p></div><picture class="pic shot"><img class="only-light" src="../shots/light-counter.jpg" alt="The sales counter" width="1440" height="900" loading="lazy"><img class="only-dark" src="../shots/dark-counter.jpg" alt="The sales counter in dark appearance" width="1440" height="900" loading="lazy"></picture></div>
 <div class="step"><div><h3><span class="n">4</span> Look around the pharmacy</h3><p>Ring up a sale, receive a delivery, check expiry, and open GST returns. Everything here is invented.</p></div><picture class="pic shot"><img class="only-light" src="../shots/light-stock.jpg" alt="Stock and expiry" width="1440" height="900" loading="lazy"><img class="only-dark" src="../shots/dark-stock.jpg" alt="Stock and expiry in dark appearance" width="1440" height="900" loading="lazy"></picture></div>
 </section>
 
@@ -85,7 +84,7 @@
 <section class="tint" id="after">
   <div class="center"><p class="kicker">Afterwards</p><h2>Check it, or take it away.</h2></div>
   <div class="grid two">
-    <div class="card"><h3>Did everything install correctly?</h3><p>Run <code>~/.zyvor-pharma/app/install.sh test</code>. It checks that the page is up, that the printed password signs in, and that stock, sales, orders, bills, customers and the register can be read. <strong>All checks passed</strong> means everything works.</p></div>
+    <div class="card"><h3>Did everything install correctly?</h3><p>Run <code>~/.zyvor-pharma/app/install.sh test</code>. It checks that the page is up and that the printed password signs in. Once you have chosen your own password, run it as <code>install.sh test --password 'yours'</code> to check that stock, sales, orders, bills, customers and the register can be read. <strong>All checks passed</strong> means everything works.</p></div>
     <div class="card"><h3>Remove it</h3><p>Run <code>~/.zyvor-pharma/app/install.sh uninstall</code>. The containers, their data, the images and the <code>~/.zyvor-pharma</code> folder are deleted.</p></div>
   </div>
 </section>
@@ -95,7 +94,7 @@
   <div class="faqs">
 <details><summary>Nothing opened, or the page cannot be reached</summary><p>Give it a minute after the command finishes, then run <code>~/.zyvor-pharma/app/install.sh status</code> and open the address the installer printed (usually <code>http://127.0.0.1:8080</code>). It listens on this computer only.</p></details>
 <details><summary>It says Docker is needed</summary><p>The trial runs in containers. Install Docker Desktop (Mac, Windows) or Docker/Podman (Linux), start it, and run the command again.</p></details>
-<details><summary>I forgot the password</summary><p>It is in <code>~/.zyvor-pharma/.env</code> as <code>ZY_ADMIN_PASSWORD</code>. Or uninstall and install again (that creates a new empty pharmacy).</p></details>
+<details><summary>I forgot the password</summary><p>Until you have chosen your own, the printed one is in <code>~/.zyvor-pharma/.env</code> as <code>ZY_ADMIN_PASSWORD</code>. After that it cannot be recovered here: uninstall and install again (that creates a new empty pharmacy).</p></details>
 <details><summary>Port 8080 is already in use</summary><p>Add a different port at the end of the command, for example <code>--port 8081</code>.</p></details>
 <details><summary>Windows: what happens the first time</summary><p>If WSL 2 is missing the script tells you to run <code>wsl --install</code>; restart, open Ubuntu once to create a Linux user, install Docker there, and run the same command again.</p></details>
 <details><summary>I am behind a company proxy or firewall</summary><p>The installer downloads from github.com (the release files). Ask IT to allow it, or try from a home connection.</p></details>
