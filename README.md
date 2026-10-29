@@ -3,7 +3,7 @@
 A pharmacy counter and stock system for India: sell with GST, keep stock by batch and expiry, and keep the
 controlled-drug register. One codebase runs as a desktop app (macOS, Windows, Linux) and as a web app on Kubernetes.
 
-**Try it: <https://zyvorai.github.io/zyvor-pharma-site/demo/>**
+**Try it: <https://zyvorai.github.io/zyvor-pharma-site/try/>** (guided trial), or the **browser demo: <https://zyvorai.github.io/zyvor-pharma-site/demo/>**
 The demo runs entirely in your browser with made-up data. Nothing is sent anywhere and it resets when you reload.
 Never type real patient or business data into it. The source code is private; this repository holds the demo and
 this page.

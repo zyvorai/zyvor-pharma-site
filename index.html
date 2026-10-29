@@ -1,28 +1,102 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zyvora Pharmacy Workspace</title>
-<meta name="description" content="A pharmacy counter and stock system for India: GST, batches and expiry, Schedule H/H1/X and the controlled-drug register.">
-<style>
-  :root { --bg:#fff; --text:#1d1d1f; --muted:#6e6e73; --accent:#0071e3; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#000; --text:#f5f5f7; --muted:#a1a1a6; --accent:#2997ff; } }
-  body { margin:0; background:var(--bg); color:var(--text); font:17px/1.47 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; -webkit-font-smoothing:antialiased; }
-  main { max-width:760px; margin:0 auto; padding:14vh 24px 10vh; text-align:center; }
-  h1 { font-size:clamp(36px,7vw,64px); line-height:1.07; letter-spacing:-0.02em; margin:0 0 16px; }
-  p { color:var(--muted); font-size:21px; margin:0 auto 32px; max-width:34em; }
-  a.btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; padding:12px 24px; border-radius:980px; font-weight:600; }
-  a.quiet { color:var(--accent); text-decoration:none; margin-left:20px; }
-  small { display:block; margin-top:48px; color:var(--muted); font-size:14px; }
-</style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zyvora Pharmacy · The pharmacy counter, done right</title>
+<meta name="description" content="Zyvora Pharmacy is a pharmacy counter and stock system for India: GST, batches and expiry, Schedule H/H1/X and the controlled-drug register, purchasing, and GST returns.">
+<meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://zyvorai.github.io/zyvor-pharma-site/">
+<link rel="icon" href="assets/pharma.svg" type="image/svg+xml">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Zyvora Pharmacy"><meta property="og:title" content="Zyvora Pharmacy · The pharmacy counter, done right"><meta property="og:description" content="Zyvora Pharmacy is a pharmacy counter and stock system for India: GST, batches and expiry, Schedule H/H1/X and the controlled-drug register, purchasing, and GST returns."><meta property="og:url" content="https://zyvorai.github.io/zyvor-pharma-site/">
+<meta name="twitter:card" content="summary">
+<script src="theme.js"></script>
+<link rel="stylesheet" href="site.css">
+
 </head>
 <body>
-<main>
-  <h1>The pharmacy counter, done right.</h1>
-  <p>Sell with GST, track every batch and expiry, and keep the controlled-drug register. On your desktop or on the web.</p>
-  <a class="btn" href="demo/">Try the demo</a><a class="quiet" href="https://github.com/zyvorai/zyvor-pharma-site#readme">Read more</a>
-  <small>The demo runs in your browser with made-up data. Never enter real patient or business data.</small>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <a class="brand" href="#top" aria-label="Zyvora Pharmacy home">
+    <img class="logo" src="assets/pharma.svg" alt="" width="32" height="32">
+    <span class="wm"><b>zyvora</b> Pharmacy</span>
+  </a>
+  <nav id="sections" aria-label="Sections">
+    <a class="nav-try" href="try/">Try it</a><a href="demo/">Browser demo</a><a href="#see">See it</a><a href="#modules">Modules</a><a href="#honest">Honest limits</a><a href="#faq">FAQ</a>
+  </nav>
+  <div class="bar-actions">
+    <button id="theme" class="icon" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+      <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+    <a class="btn primary small" href="mailto:sales@zyvor.dev?subject=Zyvora%20Pharmacy%20pilot">Talk to us</a>
+  </div>
+</header>
+<main id="main">
+<section class="hero" id="top">
+  <img class="hero-z" src="assets/pharma.svg" alt="" width="72" height="72">
+  <p class="kicker">Zyvor AI Labs · Pharmacy</p>
+  <h1>The pharmacy counter, <em>done right.</em></h1>
+  <p class="lede"><strong>Sell with GST, track every batch and expiry, keep the controlled-drug register</strong> and close the month, from one calm workspace on your desktop or on the web.</p>
+  <div class="cta"><a class="btn primary" href="try/">Try it on your computer</a><a class="btn" href="demo/">Open the browser demo</a><a class="btn" href="#see">See the screens</a><a class="btn" href="mailto:sales@zyvor.dev?subject=Zyvora%20Pharmacy%20pilot">Ask about a pilot</a></div>
+  <ul class="chips" aria-label="Status"><li class="ok">Keyboard-first</li><li>Desktop and web</li><li>Light and dark</li><li>English and Hindi</li><li class="warn">Pilot release 0.1.0</li><li class="warn">Synthetic data only</li><li class="warn">Not a certified tax system</li></ul>
+  <div class="window" role="group" aria-label="A screenshot of the Zyvora Pharmacy overview (synthetic data)"><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+    <img class="only-light" src="shots/light-overview.jpg" alt="Zyvora Pharmacy overview (synthetic data)" width="1440" height="900" fetchpriority="high" decoding="async"><img class="only-dark" src="shots/dark-overview.jpg" alt="Zyvora Pharmacy overview in dark appearance (synthetic data)" width="1440" height="900" decoding="async"></div>
+  <p class="foot">Screenshot of the running application with a fictional catalogue.</p>
+</section>
+
+<section class="band" aria-label="By the numbers">
+  <div><b>5</b><span>staff roles, each with its own permissions</span></div>
+  <div><b>29</b><span>database migrations, each tested on SQLite and PostgreSQL</span></div>
+  <div><b>2,000+</b><span>automated tests, run on both databases and the real desktop app</span></div>
+  <div><b>0</b><span>patient or business data in this demo</span></div>
+</section>
+
+<section id="see" class="tint">
+  <div class="center"><p class="kicker">See it</p><h2>Real screens. Real ledger underneath.</h2><p class="sub">Captured from the running application. The products, customers and stock shown are fictional.</p></div>
+  <div class="controls">
+    <div class="seg" role="radiogroup" aria-label="Screen" data-key="view"><button type="button" role="radio" aria-checked="true" data-value="overview">Overview</button><button type="button" role="radio" aria-checked="false" data-value="counter">The counter</button><button type="button" role="radio" aria-checked="false" data-value="stock">Stock</button><button type="button" role="radio" aria-checked="false" data-value="orders">Purchasing</button><button type="button" role="radio" aria-checked="false" data-value="gst">GST returns</button><button type="button" role="radio" aria-checked="false" data-value="register">Register</button></div>
+    <div class="seg" role="radiogroup" aria-label="Appearance" data-key="mode"><button type="button" role="radio" aria-checked="true" data-value="light">Light</button><button type="button" role="radio" aria-checked="false" data-value="dark">Dark</button></div>
+  </div>
+  <figure class="shot"><img id="shot" src="shots/light-overview.jpg" alt="Zyvora Pharmacy: Your daily view, light appearance, synthetic data" width="1440" height="900" loading="lazy"><figcaption id="shot-cap">Your daily view · light · synthetic data</figcaption></figure>
+</section>
+
+<section id="modules">
+  <div class="center"><p class="kicker">Modules</p><h2>What a pharmacy day needs.</h2><p class="sub">Each card is built and covered by tests. The limits are on this page too, in <a href="#honest">Honest limits</a>.</p></div>
+  <div class="grid"><div class="card rv"><h3>The counter</h3><p>Barcode or name search, GST-correct bills, batch and expiry picked for you (earliest expiry first), schedule H/H1/X rules with the prescriber recorded, discounts, payments split across cash, UPI and card, customers on account, loyalty points, and printable invoices.</p></div><div class="card rv"><h3>Stock and expiry</h3><p>Batches with expiry and cost, near-expiry and slow-moving lists, free units on a delivery ("10 + 1") costed correctly, substitutes by salt and strength, and reorder suggestions from how fast things really sell.</p></div><div class="card rv"><h3>Purchasing</h3><p>Purchase orders, receiving against an order, supplier bills with GST, payments, a supplier statement and ageing, a price history by supplier, returns to suppliers with the credit note and its GST, and an invoice reader that fills a delivery from a photo or PDF.</p></div><div class="card rv"><h3>Controlled drugs</h3><p>A hash-chained register for Schedule H1 and X: every dispense and every return, with the balance left, and a check that nothing has been altered.</p></div><div class="card rv"><h3>GST and accounts</h3><p>GSTR-1 and GSTR-3B figures with input tax credit from supplier bills, e-way bill JSON for the NIC portal, a sales register, and a Tally voucher export with the input tax ledgers.</p></div><div class="card rv"><h3>Care desk</h3><p>Prescriptions by doctor, refill reminders from each customer's own buying pattern, and a hospital hand-off.</p></div><div class="card rv"><h3>Many stores</h3><p>One company, several stores, transfers between them and a store switcher; each store keeps its own stock, bills and register.</p></div><div class="card rv"><h3>Desktop and web</h3><p>A desktop app that keeps its data in a file on the computer, and the same screens on a web server with sign-in, roles and an audit log. Encrypted backups, with automatic backups on the desktop.</p></div></div>
+</section>
+
+<section class="tint try-band" id="install">
+  <div class="center"><p class="kicker">Try it</p><h2>Two ways, no sign-up.</h2><p class="sub">Open the demo in this browser right now, or install a private copy on your own computer with one command. Both use made-up data. <a href="try/">Start the guided trial</a>.</p></div>
+  <div class="cta"><a class="btn primary" href="demo/">Open the browser demo</a><a class="btn" href="try/">Install on my computer</a></div>
+  <pre class="cmd" tabindex="0"><code>curl -fsSL https://github.com/zyvorai/zyvor-pharma-site/releases/latest/download/get.sh | sh -s -- up --demo</code></pre>
+  <p class="small center">Windows PowerShell uses <code>get.ps1</code>: see <a href="try/">Try it</a>.</p>
+</section>
+
+<section id="honest">
+  <div class="center"><p class="kicker">Honest limits</p><h2>What Zyvora Pharmacy is not, yet.</h2><p class="sub">Taken from the product's own documentation. A long feature list does not prove a commercial launch.</p></div>
+  <table><thead><tr><th>Area</th><th>Where it stands</th></tr></thead><tbody><tr><td>Maturity</td><td>A <b>pilot release</b> with a working core, tested at several layers. Start with a controlled pilot alongside your existing process.</td></tr><tr><td>Tax and statutory</td><td>GST figures, GSTR-1/3B offline-tool JSON and e-way bill JSON are worked out for you to check. <b>Zyvora files nothing</b>, is not certified GST software, does not do e-invoicing (IRN), and does not reconcile with GSTR-2B. Whether a credit may be claimed is for you and your accountant.</td></tr><tr><td>Hardware and payments</td><td>Payments are recorded, not initiated. No payment gateway, fiscal printer or scale drivers.</td></tr><tr><td>Medicine data</td><td>No built-in medicine database or interaction checks. Salt and strength lookups use what is in your own catalogue.</td></tr><tr><td>Controlled drugs</td><td>The register is a faithful record, not a licence. Inspectors' formats and local rules still apply.</td></tr><tr><td>Windows</td><td>The one-command trial on Windows runs inside WSL 2 and has <b>not yet been verified on a real Windows PC</b>.</td></tr><tr><td>Desktop installers</td><td>Signed, auto-updating desktop installers are not published yet; the trial uses the container install and the browser demo.</td></tr><tr><td>Security</td><td>No independent security review yet. The trial listens on this computer only.</td></tr><tr><td>Scale</td><td>The server uses one PostgreSQL database; no application-level high availability.</td></tr></tbody></table>
+</section>
+
+<section id="faq">
+  <div class="center"><p class="kicker">Questions</p><h2>Straight answers.</h2></div>
+  <details><summary>Can I run my pharmacy on it today?</summary><p>Treat it as a pilot. The counter, stock, purchasing, register and GST workings are built and tested, but filing, payment gateways and hardware drivers are not there. Run it alongside your current process first.</p></details><details><summary>Does it do GST?</summary><p>It works out bills, returns and credit in the way the law sets them out and exports files for the GST offline tool, the e-way bill portal and Tally. It does not file anything and is not certified GST software.</p></details><details><summary>Does it need the internet?</summary><p>No. The desktop app and the trial copy run on your own machine. The browser demo runs entirely in your browser.</p></details><details><summary>Where does my data live?</summary><p>On your computer (a SQLite file) for the desktop app, or in your own PostgreSQL for the server. The trial copy keeps made-up data in a container volume that <code>uninstall</code> deletes.</p></details><details><summary>Is there AI in it?</summary><p>There is an optional invoice reader that fills a delivery from a photo or PDF, running in the app. Suggestions (reorder, refills) are arithmetic from your own history, and the screen shows the working.</p></details><details><summary>Can I see the source?</summary><p>The source repository is private. Ask sales what can be shared with evaluators; the trial uses published container images, not the source.</p></details>
+</section>
+
+<section class="final">
+  <h2>Ready for a pilot?</h2>
+  <p class="lede">Tell us about your pharmacy. We will walk you through it with a fictional catalogue first.</p>
+  <div class="cta"><a class="btn primary" href="mailto:sales@zyvor.dev?subject=Zyvora%20Pharmacy%20pilot">Contact sales</a><a class="btn" href="mailto:security@zyvor.dev?subject=Zyvora%20Pharmacy%20security%20questions">Security questions</a></div>
+</section>
 </main>
+<footer>
+  <div class="cols">
+    <div><h3>Zyvora Pharmacy</h3><a href="try/">Try it</a><a href="demo/">Browser demo</a><a href="#see">See it</a><a href="#modules">Modules</a></div>
+    <div><h3>Trust</h3><a href="#honest">Honest limits</a><a href="#faq">FAQ</a></div>
+    <div><h3>Zyvor AI Labs</h3><a href="https://zyvorai.github.io/zyvor-retail-site/">Zyvor Retail</a><a href="mailto:sales@zyvor.dev">sales@zyvor.dev</a></div>
+  </div>
+  <p>&copy; Zyvor AI Labs. Release 0.1.0 pilot. All screens use fictional data.</p>
+</footer>
+<script src="site.js"></script>
+
 </body>
 </html>
