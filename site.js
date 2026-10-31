@@ -19,7 +19,7 @@
   var state = { mode: root.getAttribute("data-theme") === "dark" ? "dark" : "light", view: "overview" };
   var LABEL = {
     light: "light", dark: "dark",
-    overview: "Your daily view", counter: "The counter", stock: "Stock and expiry", orders: "Purchase orders", gst: "GST returns", register: "Controlled-drug register", reorder: "Reorder suggestions"
+    overview: "Your daily view", counter: "The counter", stock: "Stock and expiry", orders: "Purchase orders", gst: "GST returns", register: "Controlled-drug register", reorder: "Reorder suggestions", upi: "UPI QR at the counter", suppliers: "Suppliers and payables", customers: "Customers on account", refills: "Refill reminders", insights: "Insights", reports: "Reports", daybook: "Day book", stores: "Stores"
   };
   var img = document.getElementById("shot"), cap = document.getElementById("shot-cap");
   var groups = [].slice.call(document.querySelectorAll(".seg"));
