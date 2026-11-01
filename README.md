@@ -11,7 +11,7 @@ desktop app (macOS today; Windows and Linux are not yet verified) and as a web a
 The demo runs entirely in your browser with made-up data. Nothing is sent anywhere and it resets when you reload. Never type real
 patient or business data into it. The source code is private; this repository holds the website and the demo.
 
-`Release 0.1.2 pilot` · `pharmacy` · `India` · `GST` · `UPI` · `Schedule H1` · `batch and expiry` · `desktop and web`
+`Release 0.1.3 pilot` · `pharmacy` · `India` · `GST` · `UPI` · `Schedule H1` · `batch and expiry` · `desktop and web`
 
 ## See it
 
