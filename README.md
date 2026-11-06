@@ -38,15 +38,15 @@ More screens, in light and dark, are on the [website](https://zyvorai.github.io/
 
 | Area | What is built |
 |---|---|
-| **The counter** | Barcode, GS1 DataMatrix, camera or name search; Schedule H/H1/X rules; discounts per product, per bill or per store; free-unit schemes; cash, UPI, card or split payment; customers on account; loyalty points; print, PDF and WhatsApp bills |
+| **The counter** | Barcode, GS1 DataMatrix, camera or name search; Schedule H/H1/X rules; discounts per product, per bill or per store; free-unit schemes; cash, UPI, card or split payment (arrived tick + optional UTR); customers on account; loyalty tiers; print, PDF, WhatsApp and SMS drafts |
 | **Stock and expiry** | Batches with expiry and cost, packs in strips and loose tablets, near-expiry and slow-moving lists, substitutes by salt and strength, receiving by scan |
 | **Purchasing** | Purchase orders, receiving, an invoice reader (photo or PDF), supplier bills with GST, payments, statements and ageing, price history, returns with credit notes |
 | **Customers and credit** | Credit limits and payment terms in days, opening balances, receipts, statements, ageing, write-offs, customer returns with GST credit notes, refill reminders |
 | **Controlled drugs** | Append-only, hash-chained H1/X register with balances per batch, CSV for an inspector |
-| **GST and accounts** | GSTR-1 and GSTR-3B figures, a GSTR-2B match, e-way bill JSON, e-invoice JSON that records the portal's IRN, sales register, Tally voucher export |
+| **GST and accounts** | GSTR-1 and GSTR-3B figures, a GSTR-2B match, e-way bill JSON, e-invoice JSON that records the portal's IRN, sales register, Tally voucher export, Busy vouchers CSV |
 | **Reports and insights** | Takings by day, hour and payment method, top products, GST by rate, busy hours, owed by customers and to suppliers |
 | **Shifts and cash** | Float, cash in and out, a counted close that must be explained, a day book you can send to the owner on WhatsApp |
-| **Many stores** | Transfers, store switcher, per-store bill details and standing discount, chain-wide reorder suggestion |
+| **Many stores** | Transfers, store switcher, per-store bill details and standing discount, per-store price lists, catalogue lock policy, chain-wide reorder, storefront orders, delivery slots |
 | **Security and operations** | Roles, two-step sign-in, optional single sign-on, audit log, encrypted backups with a restore check and off-site copies, metrics and alert rules |
 
 ## Where it runs
@@ -65,9 +65,10 @@ This is a pilot, and the website says what is not done as plainly as what is. In
 
 - Not a compliance certificate. No pharmacist or CA has reviewed the GST invoices or the register yet, and there has been no independent security review.
 - Zyvora **files nothing** and is not certified GST software. The GSTR-2B match and the exports have not been checked against a real portal.
-- UPI is a QR: Zyvora **cannot see that money arrived**, so the cashier confirms in the shop's UPI app. No payment gateway and no SMS sending.
+- UPI is a QR: Zyvora **cannot see that money arrived** by itself, so the cashier confirms in the shop's UPI app (arrived tick + optional UTR). An optional provider webhook can confirm later; no live gateway is bundled.
 - Scanners, the camera and thermal printers are tested with simulated input; **no real printer or scanner** has been tried.
-- No bundled clinical database; the shop enters its own interaction rules. No direct importers for Marg, Busy or Tally yet.
+- No bundled clinical database; the shop enters its own interaction rules. Marg/Busy/Tally CSV remapping and Busy/Tally exports are built; proprietary binary exports are not.
+- Click-to-SMS drafts sit beside WhatsApp; auto-send is off unless the server sets a messaging provider. Per-store price lists, customer Rx upload links, storefront orders, delivery slots, loyalty tiers and ABHA fields are in the product.
 - Signed, auto-updating installers are not published yet; Windows and Linux desktops are not verified.
 - One PostgreSQL database and no high availability. Not a hosted service.
 
