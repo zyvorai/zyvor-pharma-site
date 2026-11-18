@@ -2,6 +2,8 @@
 
 # Zyvora Pharmacy
 
+[Client overview (PDF)](docs/Zyvora-Pharmacy-Client-Overview.pdf)
+
 **The pharmacy counter, done right.** A pharmacy counter and stock system for India: sell with GST, keep stock by batch and expiry,
 collect UPI payments at the counter, run customers on account, and keep the controlled-drug register. One codebase runs as a
 desktop app (macOS today; Windows and Linux are not yet verified) and as a web app on Kubernetes. English and Hindi, light and dark.
