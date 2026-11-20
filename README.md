@@ -6,7 +6,7 @@
 
 **The pharmacy counter, done right.** A pharmacy counter and stock system for India: sell with GST, keep stock by batch and expiry,
 collect UPI payments at the counter, run customers on account, and keep the controlled-drug register. One codebase runs as a
-desktop app (macOS today; Windows and Linux are not yet verified) and as a web app on Kubernetes. English and Hindi, light and dark.
+desktop app (Mac only, Apple silicon) and as a web app on Kubernetes. English and Hindi, light and dark.
 
 **Try it:** [guided trial](https://zyvorai.github.io/zyvor-pharma-site/try/) · [browser demo](https://zyvorai.github.io/zyvor-pharma-site/demo/) · [website](https://zyvorai.github.io/zyvor-pharma-site/)
 
@@ -71,7 +71,7 @@ This is a pilot, and the website says what is not done as plainly as what is. In
 - Scanners, the camera and thermal printers are tested with simulated input; **no real printer or scanner** has been tried.
 - No bundled clinical database; the shop enters its own interaction rules. Marg/Busy/Tally CSV remapping and Busy/Tally exports are built; proprietary binary exports are not.
 - Click-to-SMS drafts sit beside WhatsApp; auto-send is off unless the server sets a messaging provider. Per-store price lists, customer Rx upload links, storefront orders, delivery slots, loyalty tiers and ABHA fields are in the product.
-- Signed, auto-updating installers are not published yet; Windows and Linux desktops are not verified.
+- The desktop app is Mac only (Apple silicon, notarized DMG). There is no Windows or Linux build. Licence: a free 30-day trial key from sales@zyvor.dev, then a licence key; soft, nothing is ever switched off.
 - One PostgreSQL database and no high availability. Not a hosted service.
 
 The full table is on the [website](https://zyvorai.github.io/zyvor-pharma-site/#honest).
