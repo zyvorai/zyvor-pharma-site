@@ -71,7 +71,7 @@ This is a pilot, and the website says what is not done as plainly as what is. In
 - Scanners, the camera and thermal printers are tested with simulated input; **no real printer or scanner** has been tried.
 - No bundled clinical database; the shop enters its own interaction rules. Marg/Busy/Tally CSV remapping and Busy/Tally exports are built; proprietary binary exports are not.
 - Click-to-SMS drafts sit beside WhatsApp; auto-send is off unless the server sets a messaging provider. Per-store price lists, customer Rx upload links, storefront orders, delivery slots, loyalty tiers and ABHA fields are in the product.
-- The desktop app is Mac only (Apple silicon, notarized DMG). There is no Windows or Linux build. Licence: a free 30-day trial key from sales@zyvor.dev, then a licence key; soft, nothing is ever switched off.
+- The desktop app is Mac only (Apple silicon, notarized DMG). There is no Windows or Linux build. Pricing (INR incl. 18% GST): Single Store INR 9,999 per store per year (up to 3 tills; extra till INR 1,499), Multi-Store INR 7,999 per store per year (min 3 stores). Licence: a free 30-day trial key from sales@zyvor.dev, then a licence key; soft, nothing is ever switched off.
 - One PostgreSQL database and no high availability. Not a hosted service.
 
 The full table is on the [website](https://zyvorai.github.io/zyvor-pharma-site/#honest).
